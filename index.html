@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiceMarket</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="screen active">
+            <div class="loading-container">
+                <div class="loading-animation">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="user-info">
+                    <img id="user-avatar" class="user-avatar" src="" alt="Avatar">
+                    <h2 id="user-name">Loading...</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Screen -->
+        <div id="main-screen" class="screen">
+            <div class="header">
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span class="stat-value" id="stars">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">💎</span>
+                        <span class="stat-value" id="balance">0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <!-- Market Tab -->
+                <div id="market-tab" class="tab-content active">
+                    <div class="gifts-grid" id="gifts-grid">
+                        <!-- Gifts will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- My Gifts Tab -->
+                <div id="gifts-tab" class="tab-content">
+                    <div class="my-gifts" id="my-gifts">
+                        <!-- User gifts will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- History Tab -->
+                <div id="history-tab" class="tab-content">
+                    <div class="history-list" id="history-list">
+                        <!-- History will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Profile Tab -->
+                <div id="profile-tab" class="tab-content">
+                    <div class="profile-container">
+                        <img id="profile-avatar" class="profile-avatar" src="" alt="Avatar">
+                        <h2 id="profile-name">User</h2>
+                        <p id="profile-username">@username</p>
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <span class="label">Gifts Received</span>
+                                <span class="value" id="profile-received">0</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="label">Gifts Sent</span>
+                                <span class="value" id="profile-sent">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav">
+                <button class="nav-btn active" data-tab="market">
+                    <span class="nav-icon">🛍️</span>
+                    <span class="nav-label">Market</span>
+                </button>
+                <button class="nav-btn" data-tab="gifts">
+                    <span class="nav-icon">🎁</span>
+                    <span class="nav-label">My Gifts</span>
+                    <span class="badge" id="gifts-badge" style="display:none;">0</span>
+                </button>
+                <button class="nav-btn" data-tab="history">
+                    <span class="nav-icon">📜</span>
+                    <span class="nav-label">History</span>
+                </button>
+                <button class="nav-btn" data-tab="profile">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-label">Profile</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
